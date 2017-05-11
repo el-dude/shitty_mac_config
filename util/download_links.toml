@@ -1,0 +1,47 @@
+# -*- coding: utf-8 -*-
+#
+### List of app downlaod URL's to install for Mac Laptop
+# April 1st 2017
+#
+###
+#
+### Notes:
+#
+## Install .app from a .dmg:
+# hdiutil attach -mountpoint <path-to-desired-mountpoint> <filename.dmg>
+# hdiutil convert ~/Downloads/SonosDesktopController72.dmg -format UDTO -o ~/Downloads/SonosDesktopController72.cdr
+# hdiutil attach -mountpoint /Volumes/sonos ~/Downloads/SonosDesktopController72.cdr 
+# hdiutil detach <path-to-mountpoint>
+#
+## Install a .pkg from a mounted .dmg:
+# sudo /usr/sbin/installer -pkg path/to/file.pkg -target /
+#
+###
+#
+# atom zip file extracts to same dir and then just copy the .app to /Applications
+# chrome .dmg copy app in mounted .dmg to /Applications
+# firefox .dmg copy app in mounted .dmg to /Applications
+# slack zip file extracts to same dir and then just copy the .app to /Applications
+# terraform zip file extracts to same dir and then copy to /opt/hashi/terreform/terriform-<version number>/terraform & symlink that shit to your path
+# vagrant .dmg containing a .pkg that will need to be installed.
+# vbox .dmg containing a .pkg that will need to be installed.
+#
+###
+
+
+title = "App download list for Mac Laptop"
+
+[homebrew]
+  install   = '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+
+[app_urls]
+  atom      = "https://atom-installer.github.com/v1.15.0/atom-mac.zip?s=1489019658&ext=.zip"
+  chrome    = "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
+  firefox   = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/52.0.2/mac/en-US/Firefox%2052.0.2.dmg"
+  keybase   = "https://prerelease.keybase.io/Keybase.dmg"
+  slack     = "https://downloads.slack-edge.com/mac_releases/Slack-2.5.2-macOS.zip"
+  sonos     = "http://update.sonos.com/software/mac/mdcr/SonosDesktopController72.dmg"
+  terraform = "https://releases.hashicorp.com/terraform/0.9.2/terraform_0.9.2_darwin_amd64.zip?_ga=1.252042313.1136709248.1491056600"
+  vagrant   = "https://releases.hashicorp.com/vagrant/1.9.3/vagrant_1.9.3_x86_64.dmg?_ga=1.158768189.645807294.1491057373"
+  vbox      = "http://download.virtualbox.org/virtualbox/5.1.18/VirtualBox-5.1.18-114002-OSX.dmg"
+  viscosity = "https://swupdate.sparklabs.com/download/mac/release/viscosity/Viscosity%201.6.8.dmg"
